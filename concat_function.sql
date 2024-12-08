@@ -1,0 +1,11 @@
+select * from sakila.payment;
+select concat(payment_date,"    -   ",amount) as Payment_Date_nd_Amount from  sakila.payment;
+select concat_ws("     -      ",Payment_id,last_update,rental_id) as payment_details from sakila.payment;
+select length(amount) as digit_count from sakila.payment;
+select * from sakila.city;
+select length(city) as digit_count from sakila.city;
+select upper(city) as New_name from sakila.city;
+select lower(city) as New_name from sakila.city;
+select left(city,4) as start_name from sakila.city;
+select right(city,4) as last_name from sakila.city;
+select mid(city,2,4) as mid_name from sakila.city;

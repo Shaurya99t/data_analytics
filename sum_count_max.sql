@@ -1,0 +1,10 @@
+select * from sakila.payment;
+select sum(amount) as total_sum from sakila.payment;
+select count(customer_id) as total_count from sakila.payment;
+select avg(amount) as total_avg from sakila.payment;
+select * from sakila.payment, (select sum(amount) as total_sum from sakila.payment) as total_sum, (select count(customer_id) as total_count from sakila.payment) as total_count, (select avg(amount) as total_avg from sakila.payment) as total_avg;
+select max(amount) as total_max from sakila.payment;
+select min(amount) as total_min from sakila.payment;
+select truncate(amount,0) as New_amount from sakila.payment;
+select ceil(amount) as max_amount from sakila.payment;
+select floor(amount) as min_amount from sakila.payment;
